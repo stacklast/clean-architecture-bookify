@@ -27,3 +27,9 @@ This project applies the Pragmatic Clean Architecture through a Booking Applicat
     - Repositories
 - Optimistic Concurrency
 - Publishing Domain Events
+## Presentation Layer
+- Web API, .NET 8
+- Controllers
+- Middleware
+- DI Setup
+- Docker Compose
