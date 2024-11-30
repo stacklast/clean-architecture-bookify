@@ -9,4 +9,11 @@ public sealed class ApplicationDBContext : DbContext, IUnitOfWork
         : base(options)
     {
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDBContext).Assembly);
+
+        base.OnModelCreating(modelBuilder);
+    }
 }
