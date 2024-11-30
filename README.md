@@ -20,3 +20,10 @@ This project applies the Pragmatic Clean Architecture through a Booking Applicat
     - Validation
 - Exceptions
 - DI Configuration
+## Infrastructure Layer
+- EF Core
+    - DbContext
+    - Entity Configurations
+    - Repositories
+- Optimistic Concurrency
+- Publishing Domain Events
