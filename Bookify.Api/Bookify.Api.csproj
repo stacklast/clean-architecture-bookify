@@ -17,4 +17,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\src\Bookify.Application\Bookify.Application.csproj" />
+    <ProjectReference Include="..\src\Bookify.Infrastructure\Bookify.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
