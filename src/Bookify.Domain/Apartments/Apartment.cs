@@ -22,6 +22,11 @@ public sealed class Apartment : Entity
         CleaningFee = cleaningFee;
         Amenities = amenities;
     }
+
+    private Apartment()
+    {
+
+    }
     public Name Name { get; private set; }
     public Description Description { get; private set; }
     public Address Address { get; private set; }
