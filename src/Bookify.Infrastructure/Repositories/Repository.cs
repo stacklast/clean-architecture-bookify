@@ -6,9 +6,9 @@ namespace Bookify.Infrastructure.Repositories;
 internal abstract class Repository<T>
     where T : Entity
 {
-    protected readonly ApplicationDBContext DbContext;
+    protected readonly ApplicationDbContext DbContext;
 
-    protected Repository(ApplicationDBContext dbContext)
+    protected Repository(ApplicationDbContext dbContext)
     {
         DbContext = dbContext;
     }

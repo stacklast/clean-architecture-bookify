@@ -13,7 +13,7 @@ internal sealed class BookingRepository : Repository<Booking>, IBookingRepositor
         BookingStatus.Completed
     };
 
-    public BookingRepository(ApplicationDBContext dbContext)
+    public BookingRepository(ApplicationDbContext dbContext)
         : base(dbContext)
     {
     }
