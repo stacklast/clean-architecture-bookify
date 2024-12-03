@@ -4,7 +4,7 @@ services:
     container_name: Bookify.Api
     build:
       context: .
-      dockerfile: Bookify.Api/Dockerfile
+      dockerfile: src/Bookify.Api/Dockerfile
     depends_on:
       - bookify-db
     
