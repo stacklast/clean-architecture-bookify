@@ -20,6 +20,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 
     app.ApplyMigrations();
+    app.SeedData(); // comment this to not add seeds everytime.
 }
 
 app.UseHttpsRedirection();
