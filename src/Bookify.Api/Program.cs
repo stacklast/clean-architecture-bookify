@@ -20,11 +20,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 
     app.ApplyMigrations();
-    app.SeedData(); // comment this to not add seeds everytime.
+    // REMARK: Uncomment if you want to seed initial data.
+    // app.SeedData();
 }
 
 app.UseHttpsRedirection();
 
+app.UseCustomExceptionHandler();
 
 app.MapControllers();
 
