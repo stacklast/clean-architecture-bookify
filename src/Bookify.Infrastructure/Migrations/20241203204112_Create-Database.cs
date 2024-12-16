@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -11,6 +10,8 @@ namespace Bookify.Infrastructure.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.Sql("CREATE EXTENSION IF NOT EXISTS citext;");
+
             migrationBuilder.CreateTable(
                 name: "apartments",
                 columns: table => new
@@ -172,6 +173,7 @@ namespace Bookify.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "users");
+            migrationBuilder.Sql("DROP EXTENSION IF EXISTS citext;");
         }
     }
 }

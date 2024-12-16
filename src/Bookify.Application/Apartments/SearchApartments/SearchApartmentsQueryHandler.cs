@@ -31,26 +31,28 @@ internal sealed class SearchApartmentsQueryHandler :
         }
 
         using var connection = _connectionFactory.CreateConnection();
-        var sql = """
+        const string sql = """
             SELECT
-                a.id as Id,
-                a.name as Name, 
-                a.description as Description, 
-                a.price_amount as Price,
-                a.price_currency as Currency,
-                a.address_country as Country,
-                a.address_state as State,
-                a.address_zip_code as ZipCode,
-                a.address_city as City,
-                a.address_street as Street
+                a.id AS Id,
+                a.name AS Name,
+                a.description AS Description,
+                a.price_amount AS Price,
+                a.price_currency AS Currency,
+                a.address_country AS Country,
+                a.address_state AS State,
+                a.address_zip_code AS ZipCode,
+                a.address_city AS City,
+                a.address_street AS Street
             FROM apartments AS a
-            WHERE NOT EXISTS(
-                SELECT 1 FROM booking AS b
+            WHERE NOT EXISTS
+            (
+                SELECT 1
+                FROM bookings AS b
                 WHERE
-                    b.apartment_id = a.id  AND
+                    b.apartment_id = a.id AND
                     b.duration_start <= @EndDate AND
                     b.duration_end >= @StartDate AND
-                    b.status ANY(@ActiveBookingStatuses)
+                    b.status = ANY(@ActiveBookingStatuses)
             )
             """;
         var apartments = await connection
