@@ -10,6 +10,7 @@
     <DockerServiceName>bookify.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include=".files\bookify-realm-export.json" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>
