@@ -46,6 +46,12 @@ This project applies the Pragmatic Clean Architecture through a Booking Applicat
   - JWT Bearer auth
 - .NET Integration
 
+#### Authorization
+
+- Roles authorization
+- Permissions auhtorization
+- Resource-based authorization
+
 ---
 
 ## Presentation Layer
