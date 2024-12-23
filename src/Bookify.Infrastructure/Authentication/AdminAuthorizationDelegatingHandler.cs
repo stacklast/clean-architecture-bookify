@@ -1,6 +1,7 @@
 ﻿using Bookify.Infrastructure.Authentication.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
+using System.Net;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 
@@ -52,6 +53,12 @@ public sealed class AdminAuthorizationDelegatingHandler : DelegatingHandler
         };
 
         var authorizationResponse = await base.SendAsync(authorizationRequest, cancellationToken);
+
+        if (authorizationResponse.StatusCode == HttpStatusCode.Conflict)
+        {
+            // Handle the conflict, e.g., log a message or throw a custom exception
+            throw new ApplicationException("Conflict occurred while requesting authorization token.");
+        }
 
         authorizationResponse.EnsureSuccessStatusCode();
 
