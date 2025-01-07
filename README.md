@@ -61,3 +61,15 @@ This project applies the Pragmatic Clean Architecture through a Booking Applicat
 - Middleware
 - DI Setup
 - Docker Compose
+
+---
+
+## Advanced Topics
+
+- Structured logging
+- Distributed caching
+- Health Checks
+- API Versioning
+- Background Jobs
+  - Outbox Pattern
+- Minimal APIs
