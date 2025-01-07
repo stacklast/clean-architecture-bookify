@@ -48,7 +48,7 @@ internal sealed class GetBookingQueryHandler : IQueryHandler<GetBookingQuery, Bo
             sql,
             new
             {
-                request.bookingId,
+                request.BookingId,
             });
 
         if (booking == null || booking.UserId != _userContext.UserId)
