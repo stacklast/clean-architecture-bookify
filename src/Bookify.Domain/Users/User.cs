@@ -37,4 +37,10 @@ public sealed class User : Entity
     {
         IdentityId = identityId;
     }
+
+    public void Update(FirstName firstName, LastName lastName)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+    }
 }
