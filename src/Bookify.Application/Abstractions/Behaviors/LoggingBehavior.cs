@@ -27,7 +27,7 @@ public class LoggingBehavior<TRequest, TResponse>
         {
             _logger.LogInformation("Executing request {Request}", name);
 
-            var result = await next();
+            var result = await next(); //running request handlers
 
             if (result.IsSuccess)
             {
