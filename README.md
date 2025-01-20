@@ -1,6 +1,6 @@
 # Bookify
 
-This project applies the Pragmatic Clean Architecture through a Booking Application
+This project applies the Pragmatic Clean Architecture through a Booking Application .Net 8
 
 ## Domain Layer
 
@@ -74,7 +74,7 @@ This project applies the Pragmatic Clean Architecture through a Booking Applicat
   - Outbox Pattern
 - Minimal APIs
 
-## Testing
+## Testing xUnit
 
 What Should we test?
 
