@@ -73,3 +73,14 @@ This project applies the Pragmatic Clean Architecture through a Booking Applicat
 - Background Jobs
   - Outbox Pattern
 - Minimal APIs
+
+## Testing
+
+What Should we test?
+
+- Unit Testing for Application Core
+  - Domain
+  - Application
+- Integration Test
+- Functional Test
+- Architecture Test
