@@ -24,5 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Bookify.Application\Bookify.Application.csproj" />
   </ItemGroup>
-
+	<ItemGroup>
+		<InternalsVisibleTo Include="Bookify.Application.IntegrationTests" />
+	</ItemGroup>
 </Project>
