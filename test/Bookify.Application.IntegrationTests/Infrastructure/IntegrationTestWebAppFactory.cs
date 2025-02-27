@@ -18,7 +18,7 @@ namespace Bookify.Application.IntegrationTests.Infrastructure;
 public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsyncLifetime
 {
     private readonly PostgreSqlContainer _dbContainer = new PostgreSqlBuilder()
-        .WithImage("postgresql:latest") //same as my local DB
+        .WithImage("postgres:latest") //same as my local DB
         .WithDatabase("bookify")
         .WithUsername("postgress")
         .WithPassword("postgress")
@@ -30,7 +30,7 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
 
     private readonly KeycloakContainer _keycloakContainer = new KeycloakBuilder()
         .WithResourceMapping(
-            new FileInfo(".files\bookify-realm-export.json"),
+            new FileInfo(".files/bookify-realm-export.json"),
             new FileInfo("/opt/keycloak/data/import/realm.json"))
         .WithCommand("--import-realm")
         .Build();
